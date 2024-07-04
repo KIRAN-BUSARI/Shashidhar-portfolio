@@ -1,0 +1,47 @@
+/* Navbar Styling start */
+.custom-underline {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.custom-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 3px;
+    background-color: #FFCC33;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Navbar Styling End*/
+
+/* Hero Styling Start */
+/* @keyframes borderAnimation {
+    0% {
+        border-color: #FFCC33;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #FFCC33;
+    }
+}
+
+.animate-border {
+    animation: borderAnimation 2s infinite;
+} */
+
+/* Hero Styling End */
