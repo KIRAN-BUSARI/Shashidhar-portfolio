@@ -1,5 +1,56 @@
-export default function SocialMedia() {
-    return (
-        <div>SocialMedia</div>
-    )
+import React from 'react';
+
+interface SocialMediaLink {
+    platform: string;
+    url: string;
+    icon: string;
 }
+
+const socialMediaLinks: SocialMediaLink[] = [
+    {
+        platform: 'Facebook',
+        url: 'https://www.behance.net/shashidharby',
+        icon: 'fab fa-behance',
+    },
+    {
+        platform: 'Twitter',
+        url: 'https://www.twitter.com',
+        icon: 'fab fa-twitter',
+    },
+    {
+        platform: 'Instagram',
+        url: 'https://www.instagram.com/shashidharby.design/',
+        icon: 'fab fa-instagram',
+    },
+    {
+        platform: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/shashidharby/',
+        icon: 'fab fa-linkedin-in',
+    },
+];
+
+const SocialMedia: React.FC = () => {
+    return (
+        <div className="flex justify-center">
+            {/* <div className="text-[#1B1B1E] font-normal text-lg">
+                Contact
+            </div> */}
+            <div className="space-x-4">
+                {socialMediaLinks.map((social) => (
+                    <a
+                        key={social.platform}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-500 hover:text-blue-500 transition duration-300"
+                        aria-label={social.platform}
+                    >
+                        <i className={`${social.icon} text-2xl`}></i>
+                    </a>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default SocialMedia;
