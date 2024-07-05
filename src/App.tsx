@@ -1,7 +1,7 @@
-import Cards from "./compoents/Cards"
-import Hero from "./compoents/Hero"
-import Navbar from "./compoents/Navbar"
-import SocialMedia from "./compoents/SocialMedia"
+import Cards from "./compoents/Cards";
+import Hero from "./compoents/Hero";
+import Navbar from "./compoents/Navbar";
+import SocialMedia from "./compoents/SocialMedia";
 
 function App() {
   return (
