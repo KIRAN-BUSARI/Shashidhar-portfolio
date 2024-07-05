@@ -1,7 +1,7 @@
 import Cards from "./compoents/Cards"
 import Hero from "./compoents/Hero"
 import Navbar from "./compoents/Navbar"
-import SocialMedia from "./compoents/SocialMedia"
+// import SocialMedia from "./compoents/SocialMedia"
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <h1 className="font-medium text-[32px] mb-2 ml-4">Projects</h1>
         </div>
         <Cards />
-        <SocialMedia />
+        {/* <SocialMedia /> */}
       </div>
     </>
   )

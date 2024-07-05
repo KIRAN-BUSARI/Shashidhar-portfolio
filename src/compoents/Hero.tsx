@@ -1,4 +1,5 @@
 import profile from "../assets/image.png";
+import SocialMedia from "./SocialMedia";
 import "./style.css";
 
 export default function Hero() {
@@ -22,14 +23,15 @@ export default function Hero() {
                 </div>
             </div>
             <div className="flex-1 tracking-[.18em] leading-5 text-right text-[#FFCC33] font-bold mt-4 lg:mt-0 hidden md:block">
-                <p>......................</p>
+                {/* <p>......................</p>
                 <p>..........</p>
                 <p>..................</p>
                 <p>........................</p>
                 <p>.......</p>
                 <p>............</p>
                 <p>.........</p>
-                <p>..............</p>
+                <p>..............</p> */}
+                <SocialMedia />
             </div>
         </div>
     )

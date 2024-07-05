@@ -8,14 +8,9 @@ interface SocialMediaLink {
 
 const socialMediaLinks: SocialMediaLink[] = [
     {
-        platform: 'Facebook',
+        platform: 'Behance',
         url: 'https://www.behance.net/shashidharby',
         icon: 'fab fa-behance',
-    },
-    {
-        platform: 'Twitter',
-        url: 'https://www.twitter.com',
-        icon: 'fab fa-twitter',
     },
     {
         platform: 'Instagram',
@@ -31,18 +26,18 @@ const socialMediaLinks: SocialMediaLink[] = [
 
 const SocialMedia: React.FC = () => {
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-end">
             {/* <div className="text-[#1B1B1E] font-normal text-lg">
                 Contact
             </div> */}
-            <div className="space-x-4">
+            <div className="flex-col flex">
                 {socialMediaLinks.map((social) => (
                     <a
                         key={social.platform}
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-500 hover:text-blue-500 transition duration-300"
+                        className="text-gray-500 hover:text-[#FFCC33] transition duration-300"
                         aria-label={social.platform}
                     >
                         <i className={`${social.icon} text-2xl`}></i>
