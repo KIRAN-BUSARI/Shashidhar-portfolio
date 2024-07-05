@@ -8,7 +8,7 @@ const Card = ({ title, image, link }: { title: string, image: string, link: stri
                     <img
                         src={image}
                         alt="Kapable Logo"
-                        className="w-[340px] h-[300px] transition-transform duration-300 ease-in-out transform hover:scale-105"
+                        className="md:w-[340px] md:h-[300px] transition-transform duration-300 ease-in-out transform hover:scale-105"
                     />
                 </Link>
             </div>
