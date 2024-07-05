@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CgMenuRight } from "react-icons/cg";
 import "./style.css";
 import { useState } from "react";
+import SocialMedia from "./SocialMedia";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -38,23 +39,17 @@ export default function Navbar() {
                             Home
                         </Link>
                         <Link
-                            to={"/projects"}
-                            className="custom-underline block text-base text-gray-900 font-normal relative"
-                        >
-                            Projects
-                        </Link>
-                        <Link
                             to={"/about-me"}
                             className="custom-underline block text-base text-gray-900 font-normal relative"
                         >
                             About Me
                         </Link>
-                        <Link
-                            to={"/resume"}
-                            className="custom-underline block text-base text-gray-900 font-normal relative"
-                        >
-                            Resume
+                        <Link to={'/contact'}>
+                            Contact
                         </Link>
+                    </div>
+                    <div className="">
+                        <SocialMedia />
                     </div>
                 </div>
             </nav>
