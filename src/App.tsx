@@ -13,7 +13,7 @@ function App() {
           <h1 className="font-medium text-[32px] mb-2 ml-4">Projects</h1>
         </div>
         <Cards />
-        <div className="md:hidden">
+        <div className="">
           <SocialMedia />
         </div>
       </div>

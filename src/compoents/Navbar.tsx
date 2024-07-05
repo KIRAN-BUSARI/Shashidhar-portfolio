@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { CgMenuRight } from "react-icons/cg";
 import "./style.css";
 import { useState } from "react";
-import SocialMedia from "./SocialMedia";
+// import SocialMedia from "./SocialMedia";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -48,9 +48,9 @@ export default function Navbar() {
                             Contact
                         </Link>
                     </div>
-                    <div className="">
+                    {/* <div className="">
                         <SocialMedia />
-                    </div>
+                    </div> */}
                 </div>
             </nav>
         </header>

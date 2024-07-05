@@ -26,7 +26,7 @@ const socialMediaLinks: SocialMediaLink[] = [
 
 const SocialMedia: React.FC = () => {
     return (
-        <div className="flex justify-end">
+        <div className="flex justify-center mb-4">
             {/* <div className="text-[#1B1B1E] font-normal text-lg">
                 Contact
             </div> */}
