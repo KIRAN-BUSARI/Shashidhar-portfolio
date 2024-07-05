@@ -1,5 +1,5 @@
 import profile from "../assets/image.png";
-import SocialMedia from "./SocialMedia";
+// import SocialMedia from "./SocialMedia";
 import "./style.css";
 
 export default function Hero() {
