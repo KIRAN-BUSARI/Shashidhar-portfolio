@@ -17,6 +17,10 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        primary: "#1B1B1E",
+        secondary: "#FFCC33",
+      },
       fontFamily: {
         madeTommy: ['MADE TOMMY', 'sans-serif']
       }

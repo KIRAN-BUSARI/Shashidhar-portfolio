@@ -8,7 +8,7 @@ import Social from "../assets/SocialMediaApp.png";
 
 export default function CardComponent() {
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto py-8">
             <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
                 <Card title='Branding & Logo Design' image={Kapable} link="https://www.behance.net/gallery/151375765/Kapable-Logo-Design" />
                 <Card title='UI/UX - Rider App' image={Rider} link='https://www.behance.net/gallery/127419845/Rider-UIUX-Project' />

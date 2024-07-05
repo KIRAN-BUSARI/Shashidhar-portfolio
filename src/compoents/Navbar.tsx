@@ -17,13 +17,13 @@ export default function Navbar() {
                 <div className="flex flex-wrap justify-between items-center max-w-screen-xl">
                     <Link to={"/"} className="text-3xl font-medium uppercase">
                         <h1 className="text-[#5B5B5B]">
-                            s<span className="text-yellow-400">y</span>
+                            s<span className="text-secondary">y</span>
                         </h1>
                     </Link>
 
                     <button
                         onClick={toggleMenu}
-                        className="block lg:hidden p-2 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400"
+                        className="block lg:hidden p-2 rounded-md text-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
                     >
                         <CgMenuRight className="font-bold text-2xl" />
                     </button>
@@ -34,17 +34,19 @@ export default function Navbar() {
                     >
                         <Link
                             to={"/"}
-                            className="custom-underline block text-base text-gray-900 font-normal relative"
+                            className="custom-underline block text-base text-primary font-normal relative"
                         >
                             Home
                         </Link>
                         <Link
                             to={"/about-me"}
-                            className="custom-underline block text-base text-gray-900 font-normal relative"
+                            className="custom-underline block text-base text-primary font-normal relative"
                         >
                             About Me
                         </Link>
-                        <Link to={'/contact'}>
+                        <Link to={'/contact'}
+                            className="custom-underline block text-base text-primary font-normal relative"
+                        >
                             Contact
                         </Link>
                     </div>

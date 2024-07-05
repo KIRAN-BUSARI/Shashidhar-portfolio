@@ -30,7 +30,7 @@ const SocialMedia: React.FC = () => {
             {/* <div className="text-[#1B1B1E] font-normal text-lg">
                 Contact
             </div> */}
-            <div className=" flex space-x-4">
+            <div className="flex space-x-4">
                 {socialMediaLinks.map((social) => (
                     <a
                         key={social.platform}
