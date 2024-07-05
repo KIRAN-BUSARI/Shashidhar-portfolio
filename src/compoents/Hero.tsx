@@ -31,7 +31,7 @@ export default function Hero() {
                 <p>............</p>
                 <p>.........</p>
                 <p>..............</p> */}
-                <SocialMedia />
+                {/* <SocialMedia /> */}
             </div>
         </div>
     )

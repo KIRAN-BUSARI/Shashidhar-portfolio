@@ -26,11 +26,11 @@ const socialMediaLinks: SocialMediaLink[] = [
 
 const SocialMedia: React.FC = () => {
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-end">
             {/* <div className="text-[#1B1B1E] font-normal text-lg">
                 Contact
             </div> */}
-            <div className="md:flex-col flex space-x-4">
+            <div className=" flex space-x-4">
                 {socialMediaLinks.map((social) => (
                     <a
                         key={social.platform}
