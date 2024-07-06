@@ -2,7 +2,7 @@ import Cards from "./components/Cards";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import SocialMedia from "./components/SocialMedia";
-import Tabs from "./components/Tabs";
+// import Tabs from "./components/Tabs";
 
 function App() {
   return (
@@ -13,7 +13,6 @@ function App() {
         <div className="text-primary flex flex-col pt-[100px] leading-[150%] mb-[40px]">
           <h1 className="font-medium text-[32px] mb-2">Where <span className="text-secondary">Passion</span> meets pixels!</h1>
         </div>
-        <Tabs />
         <Cards />
         <SocialMedia />
       </div>

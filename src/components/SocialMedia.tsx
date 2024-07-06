@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { CSSProperties, MouseEvent } from 'react';
 
 interface SocialMediaLink {
     platform: string;
     url: string;
     icon: string;
+}
+
+interface HoverColors {
+    [platform: string]: string;
 }
 
 const socialMediaLinks: SocialMediaLink[] = [
@@ -24,12 +28,24 @@ const socialMediaLinks: SocialMediaLink[] = [
     },
 ];
 
+const hoverColors: HoverColors = {
+    Behance: '#1769ff',
+    Instagram: '#E4405F',
+    LinkedIn: '#0A66C2',
+};
+
 const SocialMedia: React.FC = () => {
+    // Type definition for event handler
+    const handleMouseEnter = (platform: string) => (e: MouseEvent<HTMLAnchorElement>) => {
+        (e.currentTarget.style as CSSProperties).color = hoverColors[platform];
+    };
+
+    const handleMouseLeave = (e: MouseEvent<HTMLAnchorElement>) => {
+        (e.currentTarget.style as CSSProperties).color = '';
+    };
+
     return (
         <div className="flex justify-center mb-4">
-            {/* <div className="text-[#1B1B1E] font-normal text-lg">
-                Contact
-            </div> */}
             <div className="flex space-x-4">
                 {socialMediaLinks.map((social) => (
                     <a
@@ -37,8 +53,13 @@ const SocialMedia: React.FC = () => {
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-500 hover:text-[#FFCC33] transition duration-300"
+                        className="text-gray-500 transition duration-300"
                         aria-label={social.platform}
+                        style={{
+                            transition: 'color 0.3s',
+                        }}
+                        onMouseEnter={handleMouseEnter(social.platform)}
+                        onMouseLeave={handleMouseLeave}
                     >
                         <i className={`${social.icon} text-2xl`}></i>
                     </a>
