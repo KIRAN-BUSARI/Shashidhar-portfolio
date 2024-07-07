@@ -10,7 +10,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-10 w-full">
+    <header className="sticky top-0 z-10 w-full border-b border-gray-200">
       <nav className="pt-5 pb-5">
         <div className="flex flex-wrap justify-between items-center max-w-screen-xl">
           <a href="#" className="text-3xl font-medium uppercase">

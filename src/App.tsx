@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <nav className="bg-white border-b border-gray-200 z-10 pl-[200px] pr-[200px] sticky top-0">
+      <nav className="bg-white z-10 pl-[200px] pr-[200px] sticky top-0">
         <Navbar />
       </nav>
       <div
