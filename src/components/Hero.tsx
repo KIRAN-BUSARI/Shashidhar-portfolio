@@ -4,7 +4,7 @@ import "./style.css";
 
 export default function Hero() {
     return (
-        <div className="pt-[120px] w-full flex flex-col lg:flex-row items-center lg:items-start">
+        <div className="pt-[125px] pb-[125px] w-full flex flex-col lg:flex-row items-center lg:items-start">
             <div className="relative h-[170px] w-[170px] lg:rounded-lg rounded-full">
                 <img src={profile} alt="profile" className="w-full h-full lg:rounded-lg rounded-full" />
             </div>
