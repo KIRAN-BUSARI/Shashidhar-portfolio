@@ -122,6 +122,8 @@ const CardComponent: React.FC = () => {
             title={card.title}
             image={card.image}
             link={card.link}
+            audio="/hover_audio_effect.mp3"
+            volume={0.1}
           />
         ))}
       </div>
