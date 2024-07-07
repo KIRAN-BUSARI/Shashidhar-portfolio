@@ -14,7 +14,7 @@ export default function Hero() {
                 <div className="flex flex-col md:flex-row sm:space-x-4 mt-0 sm:mt-5">
                     <p className="bg-secondary -m-24 md:m-0 w-1 h-60 md:h-[94px] rotate-90 md:rotate-0 rounded-t-md sm:mb-0"></p>
                     <p className="text-primary/60 sm:-m-24 lg:m-0 font-normal text-[20px] leading-[150%]">
-                        Creative choreographer turned into <span className="text-primary"><b>UI/UX designer</b></span><br className="hidden sm:block" />
+                        Creative choreographer turned into <span className="text-primary font-light"><b>UI/UX designer</b></span><br className="hidden sm:block" />
                         who crafts clean, intuitive interfaces, turning complex <br className="hidden sm:block" />
                         processes into seamless and enjoyable experiences.
                     </p>

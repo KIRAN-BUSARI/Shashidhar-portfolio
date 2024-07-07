@@ -11,7 +11,7 @@ function App() {
         <Navbar />
         <Hero />
         <div className="text-primary flex flex-col pt-[100px] leading-[150%] mb-[40px]">
-          <h1 className="font-medium text-[32px] mb-2">Where <span className="text-secondary">Passion</span> meets pixels!</h1>
+          <h1 className="font-medium text-[32px] mb-2">Where <span className="text-secondary">Passion</span> meets pixels<span className="text-secondary">.</span></h1>
         </div>
         <Cards />
         <SocialMedia />
