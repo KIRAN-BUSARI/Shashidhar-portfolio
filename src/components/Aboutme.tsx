@@ -3,7 +3,7 @@ import SocialMedia from "./SocialMedia";
 
 export default function Aboutme() {
   return (
-    <div className="w-full px-4 lg:px-0">
+    <div className="w-full px-4 lg:px-0" id="aboutme">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
         <div className="w-full lg:w-[650px] h-auto lg:h-[490px]">
           <h1 className="text-2xl lg:text-[32px] mb-4 pb-4 text-center lg:text-left">

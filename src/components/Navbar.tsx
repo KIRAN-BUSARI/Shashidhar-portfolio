@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { CgMenuRight } from "react-icons/cg";
 import "./style.css";
 import { useState } from "react";
@@ -14,11 +13,11 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full">
       <nav className="bg-white border-b border-gray-200 pt-5 pb-5">
         <div className="flex flex-wrap justify-between items-center max-w-screen-xl">
-          <Link to={"/"} className="text-3xl font-medium uppercase">
+          <a href="#" className="text-3xl font-medium uppercase">
             <h1 className="text-[#5B5B5B]">
               s<span className="text-secondary">y</span>
             </h1>
-          </Link>
+          </a>
 
           <button
             onClick={toggleMenu}
@@ -32,24 +31,24 @@ export default function Navbar() {
               isOpen ? "block" : "hidden"
             }`}
           >
-            <Link
-              to={"/"}
+            <a
+              href="#"
               className="custom-underline block text-base text-primary font-normal relative"
             >
               Home
-            </Link>
-            <Link
-              to={"#aboutme"}
+            </a>
+            <a
+              href="#aboutme"
               className="custom-underline block text-base text-primary font-normal relative"
             >
               About Me
-            </Link>
-            <Link
-              to={"#contact"}
+            </a>
+            <a
+              href="#contact"
               className="custom-underline block text-base text-primary font-normal relative"
             >
               Contact
-            </Link>
+            </a>
           </div>
         </div>
       </nav>

@@ -6,7 +6,10 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <div className="min-h-screen ml-[10px] mr-[1px] lg:ml-[200px] lg:mr-[200px] font-madeTommy">
+      <div
+        id="#"
+        className="min-h-screen ml-[10px] mr-[1px] lg:ml-[200px] lg:mr-[200px] font-madeTommy"
+      >
         <Navbar />
         <Hero />
         <div className="text-primary flex flex-col leading-[150%] mb-[40px]">
