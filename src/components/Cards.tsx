@@ -42,11 +42,11 @@ const CardComponent: React.FC = () => {
     return (
         <div className="container mx-auto mb">
             <div className="flex justify-start space-x-5 pb-[16px]">
-                <button onClick={() => handleFilterChange('All')} className={`rounded-[32px] px-[44px] hover:shadow-sm py-1 border hover:bg-secondary text-primary ${filter === 'All' ? 'bg-secondary' : ''}`}>All</button>
-                <button onClick={() => handleFilterChange('UI/UX')} className={`rounded-[32px] px-[44px] hover:shadow-sm py-1 border hover:bg-secondary text-primary ${filter === 'UI/UX' ? 'bg-secondary' : ''}`}>UI/UX</button>
-                <button onClick={() => handleFilterChange('Graphic Design')} className={`rounded-[32px] px-[44px] hover:shadow-sm py-1 border hover:bg-secondary text-primary ${filter === 'Graphic Design' ? 'bg-secondary' : ''}`}>Graphic Design</button>
-                <button onClick={() => handleFilterChange('Branding')} className={`rounded-[32px] px-[44px] hover:shadow-sm py-1 border hover:bg-secondary text-primary ${filter === 'Branding' ? 'bg-secondary' : ''}`}>Branding</button>
-                <button onClick={() => handleFilterChange('Archive')} className={`rounded-[32px] px-[44px] hover:shadow-sm py-1 border hover:bg-secondary text-primary ${filter === 'Archive' ? 'bg-secondary' : ''}`}>Archive</button>
+                <button onClick={() => handleFilterChange('All')} className={`rounded-[32px] px-[44px] hover:shadow-sm py-1 border hover:border-secondary text-primary ${filter === 'All' ? 'bg-secondary' : ''}`}>All</button>
+                <button onClick={() => handleFilterChange('UI/UX')} className={`rounded-[32px] px-[44px] hover:shadow-sm py-1 border hover:border-secondary text-primary ${filter === 'UI/UX' ? 'bg-secondary' : ''}`}>UI/UX</button>
+                <button onClick={() => handleFilterChange('Graphic Design')} className={`rounded-[32px] px-[44px] hover:shadow-sm py-1 border hover:border-secondary text-primary ${filter === 'Graphic Design' ? 'bg-secondary' : ''}`}>Graphic Design</button>
+                <button onClick={() => handleFilterChange('Branding')} className={`rounded-[32px] px-[44px] hover:shadow-sm py-1 border hover:border-secondary text-primary ${filter === 'Branding' ? 'bg-secondary' : ''}`}>Branding</button>
+                <button onClick={() => handleFilterChange('Archive')} className={`rounded-[32px] px-[44px] hover:shadow-sm py-1 border hover:border-secondary text-primary ${filter === 'Archive' ? 'bg-secondary' : ''}`}>Archive</button>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mb-[125px]">
                 {sortedCards.map((card, index) => (
