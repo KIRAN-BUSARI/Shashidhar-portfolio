@@ -29,7 +29,7 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="flex flex-1 text-opacity-20 lg:text-[48px] text-6xl font-medium -tracking-[0.04em] leading-none lg:leading-[80%] w-full text-secondary mt-8 lg:mt-4 lg:justify-end justify-center">
+      <div className="flex flex-1 text-opacity-10 lg:text-[48px] text-6xl font-medium -tracking-[0.04em] leading-none lg:leading-[80%] w-full text-secondary mt-8 lg:mt-4 lg:justify-end justify-center">
         <p className="lg:text-left text-center">
           D <br /> For <br /> Dance <br /> & Design
         </p>
