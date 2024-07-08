@@ -44,7 +44,7 @@ export default function Aboutme() {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-[424px] lg:h-[490px] mt-8 lg:mt-0">
+        <div className="w-full -ml-8 lg:ml-0 -mt-8  lg:w-[424px] lg:h-[490px] lg:mt-0">
           <img src={rightImage} className="w-full h-auto" alt="image" />
         </div>
       </div>
