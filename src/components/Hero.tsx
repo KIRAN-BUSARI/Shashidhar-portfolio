@@ -3,7 +3,7 @@ import profile from "../assets/image.png";
 export default function Hero() {
   return (
     <div className="lg:pt-[125px] pt-10 lg:pb-[125px] pb-10 w-full flex flex-col lg:flex-row items-center lg:items-start">
-      <div className="relative h-[170px] w-[170px] lg:rounded-[4px] rounded-full shadow-neon">
+      <div className="relative h-[170px] w-[170px] lg:rounded-[4px] rounded-full">
         <img
           src={profile}
           alt="profile"

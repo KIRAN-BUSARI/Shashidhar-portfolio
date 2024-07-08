@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Card from "./ZoomCard";
 import Kapable from "../assets/projects/Kapable.png";
 import Rider from "../assets/projects/Rider.png";
@@ -6,6 +6,7 @@ import MyLar from "../assets/projects/MyLar.png";
 import Typography from "../assets/projects/Typography.png";
 import MailScape from "../assets/projects/MailScape.png";
 import Social from "../assets/projects/SocialMediaApp.png";
+import audio from "/hover_audio_effect.mp3";
 
 interface CardData {
   title: string;
@@ -55,6 +56,7 @@ const cardsData: CardData[] = [
 
 const CardComponent: React.FC = () => {
   const [filter, setFilter] = useState<string>("All");
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleFilterChange = (category: string) => {
     setFilter(category);
@@ -71,11 +73,27 @@ const CardComponent: React.FC = () => {
     a.title.localeCompare(b.title)
   );
 
+  const handleMouseEnter = () => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.1; // Set the volume
+      audioRef.current.play();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0; // Reset audio to start
+    }
+  };
+
   return (
     <div className="container mx-auto mb-16">
-      <div className="flex flex-wrap justify-start gap-2 sm:gap-4 pb-4">
+      <div className="flex flex-wrap justify-start gap-2 sm:gap-4 pb-10">
         <button
           onClick={() => handleFilterChange("All")}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className={`rounded-full px-4 sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
             filter === "All" ? "bg-secondary" : ""
           }`}
@@ -84,6 +102,8 @@ const CardComponent: React.FC = () => {
         </button>
         <button
           onClick={() => handleFilterChange("UI/UX")}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className={`rounded-full px-4 sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
             filter === "UI/UX" ? "bg-secondary" : ""
           }`}
@@ -92,6 +112,8 @@ const CardComponent: React.FC = () => {
         </button>
         <button
           onClick={() => handleFilterChange("Graphic Design")}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className={`rounded-full px-4 sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
             filter === "Graphic Design" ? "bg-secondary" : ""
           }`}
@@ -100,6 +122,8 @@ const CardComponent: React.FC = () => {
         </button>
         <button
           onClick={() => handleFilterChange("Branding")}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className={`rounded-full px-4 sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
             filter === "Branding" ? "bg-secondary" : ""
           }`}
@@ -108,12 +132,15 @@ const CardComponent: React.FC = () => {
         </button>
         <button
           onClick={() => handleFilterChange("Archive")}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className={`rounded-full px-4 sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
             filter === "Archive" ? "bg-secondary" : ""
           }`}
         >
           Archive
         </button>
+        <audio src={audio} ref={audioRef}></audio>
       </div>
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mb-16">
         {sortedCards.map((card, index) => (
@@ -122,8 +149,6 @@ const CardComponent: React.FC = () => {
             title={card.title}
             image={card.image}
             link={card.link}
-            audio="/hover_audio_effect.mp3"
-            volume={0.1}
           />
         ))}
       </div>

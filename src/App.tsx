@@ -6,15 +6,13 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <nav className="bg-white z-10 pl-[200px] pr-[200px] sticky top-0">
-        <Navbar />
-      </nav>
       <div
         id="#"
         className="min-h-screen ml-[10px] mr-[1px] lg:ml-[200px] lg:mr-[200px] font-madeTommy"
       >
+        <Navbar />
         <Hero />
-        <div className="text-primary flex flex-col leading-[150%] mb-[40px]">
+        <div className="text-primary flex flex-col leading-[150%] mb-[16px]">
           <h1 className="font-medium lg:text-[32px] text-3xl mb-2">
             Where <span className="text-secondary">Passion</span> meets pixels
             <span className="text-secondary">.</span>

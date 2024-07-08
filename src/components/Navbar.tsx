@@ -1,6 +1,8 @@
 import { CgMenuRight } from "react-icons/cg";
 import "./style.css";
+import { useRef } from "react";
 import { useState } from "react";
+import audio from "/hover_audio_effect.mp3";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,8 +11,24 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const handleMouseEnter = () => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.1; // Set the volume
+      audioRef.current.play();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0; // Reset audio to start
+    }
+  };
+
   return (
-    <header className="sticky top-0 z-10 w-full border-b border-gray-200">
+    <header className="sticky top-0 z-10 w-full border-b border-gray-200 bg-white">
       <nav className="pt-5 pb-5">
         <div className="flex flex-wrap justify-between items-center max-w-screen-xl">
           <a href="#" className="text-3xl font-medium uppercase">
@@ -33,23 +51,30 @@ export default function Navbar() {
           >
             <a
               href="#"
+              onMouseLeave={handleMouseLeave}
+              onMouseEnter={handleMouseEnter}
               className="custom-underline block text-base text-primary font-normal relative"
             >
               Home
             </a>
             <a
               href="#aboutme"
+              onMouseLeave={handleMouseLeave}
+              onMouseEnter={handleMouseEnter}
               className="custom-underline block text-base text-primary font-normal relative"
             >
               About Me
             </a>
             <a
               href="#contact"
+              onMouseLeave={handleMouseLeave}
+              onMouseEnter={handleMouseEnter}
               className="custom-underline block text-base text-primary font-normal relative"
             >
               Contact
             </a>
           </div>
+          <audio src={audio} ref={audioRef}></audio>
         </div>
       </nav>
     </header>

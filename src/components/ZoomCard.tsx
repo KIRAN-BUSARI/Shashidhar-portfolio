@@ -1,41 +1,16 @@
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Card = ({
   title,
   image,
   link,
-  audio,
-  volume = 0.5, // Default volume set to 50%
 }: {
   title: string;
   image: string;
   link: string;
-  audio: string;
-  volume?: number;
 }) => {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  const handleMouseEnter = () => {
-    if (audioRef.current) {
-      audioRef.current.volume = volume; // Set the volume
-      audioRef.current.play();
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0; // Reset audio to start
-    }
-  };
-
   return (
-    <div
-      className="max-w-sm rounded overflow-hidden group"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="max-w-sm rounded overflow-hidden group">
       <Link to={link} target="_blank">
         <div className="overflow-hidden rounded-[4px]">
           <img
@@ -50,7 +25,6 @@ const Card = ({
           </h1>
         </div>
       </Link>
-      <audio ref={audioRef} src={audio} />
     </div>
   );
 };
