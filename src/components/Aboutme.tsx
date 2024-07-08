@@ -1,4 +1,4 @@
-import rightImage from "../assets/profiel.png";
+import rightImage from "../assets/profile.png";
 import SocialMedia from "./SocialMedia";
 
 export default function Aboutme() {
