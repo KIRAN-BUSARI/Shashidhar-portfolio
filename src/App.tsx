@@ -2,8 +2,6 @@ import Aboutme from "./components/Aboutme";
 import Cards from "./components/Cards";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import SocialMedia from "./components/SocialMedia";
-// import Tabs from "./components/Tabs";
 
 function App() {
   return (
