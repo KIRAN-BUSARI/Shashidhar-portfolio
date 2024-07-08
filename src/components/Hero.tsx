@@ -3,11 +3,11 @@ import profile from "../assets/image.png";
 export default function Hero() {
   return (
     <div className="lg:pt-[125px] pt-10 lg:pb-[125px] pb-10 w-full flex flex-col lg:flex-row items-center lg:items-start">
-      <div className="relative h-[170px] w-[170px] lg:rounded-lg rounded-full shadow-neon">
+      <div className="relative h-[170px] w-[170px] lg:rounded-[4px] rounded-full shadow-neon">
         <img
           src={profile}
           alt="profile"
-          className="w-full h-full lg:rounded-lg rounded-full"
+          className="w-full h-full lg:rounded-[4px] rounded-full"
         />
       </div>
       <div className="mt-6 lg:mt-4 lg:ml-12 flex flex-col items-center lg:items-start text-center lg:text-left">

@@ -10,8 +10,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full">
-      <nav className="bg-white border-b border-gray-200 pt-5 pb-5">
+    <header className="sticky top-0 z-10 w-full">
+      <nav className="pt-5 pb-5">
         <div className="flex flex-wrap justify-between items-center max-w-screen-xl">
           <a href="#" className="text-3xl font-medium uppercase">
             <h1 className="text-[#5B5B5B]">
