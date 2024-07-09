@@ -20,7 +20,7 @@ const Card = ({
           />
         </div>
         <div className="py-4 flex flex-col">
-          <h1 className="font-medium lg:font-normal text-xl mb-2 text-center lg:text-start">
+          <h1 className="font-medium lg:font-normal text-lg mb-2 text-center lg:text-start">
             {title}
           </h1>
         </div>

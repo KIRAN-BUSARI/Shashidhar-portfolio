@@ -1,4 +1,4 @@
-import { CgMenuRight } from "react-icons/cg";
+import { CgMenuRight, CgClose } from "react-icons/cg";
 import "./style.css";
 import { useRef } from "react";
 import { useState } from "react";
@@ -28,9 +28,9 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-10 w-full border-b border-gray-200 bg-bg">
+    <header className="sticky top-0 z-20 w-full border-b border-gray-200 bg-bg">
       <nav className="pt-5 pb-5">
-        <div className="flex flex-wrap justify-between items-center max-w-screen-xl">
+        <div className="flex flex-wrap justify-between items-center max-w-screen-xl mx-auto">
           <a href="#" className="text-3xl font-medium uppercase">
             <h1 className="text-[#5B5B5B]">
               s<span className="text-secondary">y</span>
@@ -39,41 +39,81 @@ export default function Navbar() {
 
           <button
             onClick={toggleMenu}
-            className="block lg:hidden p-2 rounded-md text-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
+            className="block lg:hidden p-2 rounded-md text-primary relative"
           >
-            <CgMenuRight className="font-bold text-2xl" />
+            {isOpen ? (
+              <CgClose className="text-2xl" />
+            ) : (
+              <CgMenuRight className="text-2xl" />
+            )}
           </button>
-
-          <div
-            className={`w-full lg:flex lg:items-center lg:w-auto space-y-2 lg:space-y-0 lg:space-x-12 mt-4 lg:mt-0 text-right ${
-              isOpen ? "block" : "hidden"
-            }`}
-          >
-            <a
-              href="#projects"
-              onMouseLeave={handleMouseLeave}
-              onMouseEnter={handleMouseEnter}
-              className="custom-underline block text-lg text-primary font-normal relative"
-            >
-              Projects
-            </a>
-            <a
-              href="#aboutme"
-              onMouseLeave={handleMouseLeave}
-              onMouseEnter={handleMouseEnter}
-              className="custom-underline block text-lg text-primary font-normal relative"
-            >
-              About Me
-            </a>
-            <a
-              href="#contact"
-              onMouseLeave={handleMouseLeave}
-              onMouseEnter={handleMouseEnter}
-              className="custom-underline block text-lg text-primary font-normal relative"
-            >
-              Resume
-            </a>
-          </div>
+          {isOpen ? (
+            <>
+              <div className="md:hidden flex fixed right-0 w-full">
+                <div className="items-end h-48 w-full absolute flex mt-10 text-end flex-col">
+                  <div className="rounded-lg pr-5 space-y-5 font-semibold text-[20px] p-[24px] shadow-lg bg-bg mr-6">
+                    <a
+                      href="#projects"
+                      onMouseLeave={handleMouseLeave}
+                      onMouseEnter={handleMouseEnter}
+                      className="custom-underline block text-primary font-normal relative"
+                    >
+                      Projects
+                    </a>
+                    <a
+                      href="#aboutme"
+                      onMouseLeave={handleMouseLeave}
+                      onMouseEnter={handleMouseEnter}
+                      className="custom-underline block text-primary font-normal relative"
+                    >
+                      About Me
+                    </a>
+                    <a
+                      href="#contact"
+                      onMouseLeave={handleMouseLeave}
+                      onMouseEnter={handleMouseEnter}
+                      className="custom-underline block text-primary font-normal relative"
+                    >
+                      Resume
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div
+                className={`lg:flex lg:items-center lg:w-auto lg:space-y-0 lg:space-x-12 mt-4 lg:mt-0 w-full ${
+                  isOpen ? "block" : "hidden"
+                }`}
+              >
+                <a
+                  href="#projects"
+                  onMouseLeave={handleMouseLeave}
+                  onMouseEnter={handleMouseEnter}
+                  className="custom-underline block text-lg text-primary font-normal relative"
+                >
+                  Projects
+                </a>
+                <a
+                  href="#aboutme"
+                  onMouseLeave={handleMouseLeave}
+                  onMouseEnter={handleMouseEnter}
+                  className="custom-underline block text-lg text-primary font-normal relative"
+                >
+                  About Me
+                </a>
+                <a
+                  href="#contact"
+                  onMouseLeave={handleMouseLeave}
+                  onMouseEnter={handleMouseEnter}
+                  className="custom-underline block text-lg text-primary font-normal relative"
+                >
+                  Resume
+                </a>
+              </div>
+            </>
+          )}
           <audio src={audio} ref={audioRef}></audio>
         </div>
       </nav>

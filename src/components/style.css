@@ -29,62 +29,12 @@
         /* Visible on hover */
         transform-origin: bottom left;
     }
-
-    /* Navbar Styling End */
-
-    /* Hero Styling Start */
-    /* @keyframes borderAnimation {
-        0% {
-            border-color: #FFCC33;
-        }
-
-        50% {
-            border-color: transparent;
-        }
-
-        100% {
-            border-color: #FFCC33;
-        }
-    }
-
-    .animate-border {
-        animation: borderAnimation 2s infinite;
-    } */
-    /* Hero Styling End */
 }
 
 /* Small Screens */
-@media (max-width: 991px) {
-
-    /* Navbar Styling for Small Screens Start */
-    .custom-underline {
-        position: relative;
-        display: inline-block;
-        text-decoration: none;
-    }
-
-    .custom-underline::after {
-        content: "";
+@media (max-width: 992px) {
+    .menu {
         position: absolute;
-        left: 90%;
-        right: 0;
-        bottom: -4px;
-        /* Adjust the position slightly */
-        height: 3px;
-        /* Thinner underline */
-        background-color: #FFCC33;
-        /* Use the same color or a lighter shade */
-        transform: scaleX(0);
-        /* Initially invisible */
-        transform-origin: bottom right;
-        transition: transform 0.3s ease-in-out;
+        /* transform: scaleX(-12); */
     }
-
-    .custom-underline:hover::after {
-        transform: scaleX(1);
-        /* Visible on hover */
-        transform-origin: bottom left;
-    }
-
-    /* Navbar Styling for Small Screens End */
 }

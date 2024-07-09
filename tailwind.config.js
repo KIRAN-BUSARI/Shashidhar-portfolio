@@ -20,9 +20,6 @@ export default {
       container: {
         center: true
       },
-      boxShadow: {
-        neon: "0 0 5px theme('colors.yellow.200'), 0 0 20px theme('colors.yellow.700')"
-      },
       colors: {
         primary: "#1B1B1E",
         primary1: "#35353A",

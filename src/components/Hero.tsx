@@ -4,26 +4,26 @@ export default function Hero() {
       className="h-screen place-content-center flex place-items-center flex-col gap-y-4"
       id="#"
     >
-      <h1 className="lg:text-5xl text-3xl text-primary text-center font-extrabold lg:font-medium lg:leading-[128%]">
+      <h1 className="lg:text-5xl text-[38px] leading-[140%] text-primary text-center font-extrabold md:font-bold lg:font-medium lg:leading-[128%] -mt-7 lg:mt-0">
         Hey! <br />I am Shashidhar<span className="text-secondary">.</span>
       </h1>
       <p className="bg-secondary w-[3px] rotate-90 h-[256px] -mt-[140px] rounded-full"></p>
       <div className="text-primary1 font-medium lg:font-normal lg:leading-[150%] text-[20px] -mt-[125px]">
         <p className="text-center">
-          Creative choreographer turned into{" "}
-          <span className="text-primary text-2xl lg:font-normal font-medium">
-            User Experience Designer
+          Creative choreographer turned{" "}
+          <span className="text-primary text-[20px] lg:font-normal font-medium">
+            User Experience Designer,
           </span>{" "}
-          who crafts clean,
+          crafting clean,
           <br />{" "}
           <span>
-            intuitive interfaces, turning complex processes into seamless and
-            enjoyable experiences.
+            intuitive interfaces and transforming complex processes into
+            seamless and enjoyable experiences.
           </span>
         </p>
       </div>
-      <button className="text-primary lg:font-normal font-medium shadow-lg bg-secondary rounded-full px-8 py-3">
-        Let's sit with some coffee?
+      <button className="text-primary mt-3 lg:mt-0 lg:font-normal font-bold shadow-lg bg-secondary rounded-full px-8 py-3">
+        Let's talk about design?
       </button>
       <div className="mt-[150px] animate-bounce">
         <a href="#projects">

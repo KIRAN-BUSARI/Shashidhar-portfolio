@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Card from "./ZoomCard";
 import Kapable from "../assets/projects/Kapable.png";
 import Rider from "../assets/projects/Rider.png";
@@ -16,7 +16,7 @@ import Anandi from "../assets/projects/Anandi.png";
 import MoodMobileApp from "../assets/projects/Mood_Tracking_App.png";
 import KiddleOS from "../assets/projects/Kiddle_Operatin_System.png";
 import LowPolyDesign from "../assets/projects/Low-poly-design.png";
-import Dmart from "../assets/projects/Anandi.png";
+import Dmart from "../assets/projects/Dmart.png";
 
 import audio from "/hover_audio_effect.mp3";
 
@@ -136,6 +136,23 @@ const CardComponent: React.FC = () => {
   const [filter, setFilter] = useState<string>("All");
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  useEffect(() => {
+    const updateFilterBasedOnScreenSize = () => {
+      if (window.innerWidth >= 1024) {
+        setFilter("All");
+      } else {
+        setFilter("UI/UX");
+      }
+    };
+
+    updateFilterBasedOnScreenSize();
+    window.addEventListener("resize", updateFilterBasedOnScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", updateFilterBasedOnScreenSize);
+    };
+  }, []);
+
   const handleFilterChange = (category: string) => {
     setFilter(category);
   };
@@ -168,10 +185,10 @@ const CardComponent: React.FC = () => {
   return (
     <div className="container mx-auto mb-16">
       <div
-        className="text-primary lg:pt-[130px] lg:-mt-[157px] flex flex-col leading-[150%] mb-[16px] text-center lg:text-left"
+        className="text-primary lg:pt-[130px] pt-32 -mt-40 lg:-mt-[157px] flex flex-col leading-[150%] mb-[22px] text-center lg:text-left"
         id="projects"
       >
-        <h1 className="lg:font-medium font-bold lg:text-5xl text-3xl mb-2 ">
+        <h1 className="lg:font-medium font-extrabold leading-[140%] text-[38px] lg:text-5xl text-3xl mb-2 ">
           Where <span className="text-secondary">Passion</span>{" "}
           <p className="m-0 p-0 lg:hidden h-0 md:block">
             <br />
@@ -180,12 +197,12 @@ const CardComponent: React.FC = () => {
           <span className="text-secondary">.</span>
         </h1>
       </div>
-      <div className="grid grid-cols-3 lg:flex lg:justify-start justify-center items-center gap-2 sm:gap-4 pb-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-start justify-center items-center gap-2 sm:gap-4 pb-10">
         <button
           onClick={() => handleFilterChange("All")}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className={`rounded-full px-4 sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
+          className={`rounded-full md:block hidden px-4 md:font-semibold lg:font-normal sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
             filter === "All" ? "bg-secondary" : ""
           }`}
         >
@@ -195,7 +212,7 @@ const CardComponent: React.FC = () => {
           onClick={() => handleFilterChange("UI/UX")}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className={`rounded-full px-4 sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
+          className={`rounded-full px-4 md:font-semibold lg:font-normal sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
             filter === "UI/UX" ? "bg-secondary" : ""
           }`}
         >
@@ -205,7 +222,7 @@ const CardComponent: React.FC = () => {
           onClick={() => handleFilterChange("Branding")}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className={`rounded-full px-4 sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
+          className={`rounded-full px-4 md:font-semibold lg:font-normal sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
             filter === "Branding" ? "bg-secondary" : ""
           }`}
         >
@@ -215,7 +232,7 @@ const CardComponent: React.FC = () => {
           onClick={() => handleFilterChange("Graphic Design")}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className={`rounded-full px-4 sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
+          className={`rounded-full px-4 md:font-semibold lg:font-normal sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
             filter === "Graphic Design" ? "bg-secondary" : ""
           }`}
         >
@@ -225,7 +242,7 @@ const CardComponent: React.FC = () => {
           onClick={() => handleFilterChange("Archive")}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className={`rounded-full px-4 sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
+          className={`rounded-full px-4 md:font-semibold lg:font-normal sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
             filter === "Archive" ? "bg-secondary" : ""
           }`}
         >
