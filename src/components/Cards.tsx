@@ -72,7 +72,7 @@ const CardComponent: React.FC = () => {
   );
 
   return (
-    <div className="container mx-auto mb-16 px-4">
+    <div className="container mx-auto mb-16">
       <div className="flex flex-wrap justify-start gap-2 sm:gap-4 pb-4">
         <button
           onClick={() => handleFilterChange("All")}
