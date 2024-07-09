@@ -25,7 +25,9 @@ export default {
       },
       colors: {
         primary: "#1B1B1E",
+        primary1: "#35353A",
         secondary: "#FFCC33",
+        bg: "#FBFFFE",
       },
       fontFamily: {
         madeTommy: ['MADE TOMMY', 'sans-serif']

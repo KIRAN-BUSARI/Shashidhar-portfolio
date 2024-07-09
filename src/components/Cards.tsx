@@ -6,6 +6,18 @@ import MyLar from "../assets/projects/MyLar.png";
 import Typography from "../assets/projects/Typography.png";
 import MailScape from "../assets/projects/MailScape.png";
 import Social from "../assets/projects/SocialMediaApp.png";
+import Iconography from "../assets/projects/Iconography.png";
+import MixedMediaDesign from "../assets/projects/Mixed-Media-Design.png";
+import PackagingDesign from "../assets/projects/Packaging-Design.png";
+import IconsRedesign from "../assets/projects/Icons-Redesign.png";
+import ArticleLayoutDesign from "../assets/projects/Article-Layout-Design.png";
+import SandraHotel from "../assets/projects/Sandra_hotel.png";
+import Anandi from "../assets/projects/Anandi.png";
+import MoodMobileApp from "../assets/projects/Mood_Tracking_App.png";
+import KiddleOS from "../assets/projects/Kiddle_Operatin_System.png";
+import LowPolyDesign from "../assets/projects/Low-poly-design.png";
+import Dmart from "../assets/projects/Anandi.png";
+
 import audio from "/hover_audio_effect.mp3";
 
 interface CardData {
@@ -17,7 +29,7 @@ interface CardData {
 
 const cardsData: CardData[] = [
   {
-    title: "Branding & Logo Design",
+    title: "Kapable Branding & Logo Design",
     image: Kapable,
     link: "https://www.behance.net/gallery/151375765/Kapable-Logo-Design",
     category: "Branding",
@@ -32,6 +44,12 @@ const cardsData: CardData[] = [
     title: "Logo Design",
     image: MyLar,
     link: "https://www.behance.net/gallery/116686631/MYLAR-PACKAGING-SOLUTIONS-PVT-LTD",
+    category: "Branding",
+  },
+  {
+    title: "D Mart Re-Branding",
+    image: Dmart,
+    link: "https://www.behance.net/gallery/116826323/DMART-REBRANDING",
     category: "Branding",
   },
   {
@@ -51,6 +69,66 @@ const cardsData: CardData[] = [
     image: Social,
     link: "https://www.behance.net/gallery/112139341/Creative-Poster-Design",
     category: "Graphic Design",
+  },
+  {
+    title: "Iconography",
+    image: Iconography,
+    link: "https://www.behance.net/gallery/124837177/Iconography-Favourite-Food-Icons",
+    category: "Archive",
+  },
+  {
+    title: "Mixed Media Design",
+    image: MixedMediaDesign,
+    link: "https://www.behance.net/gallery/121280673/Mixed-Media-Design-Zine-(-Analog-Digital)",
+    category: "Archive",
+  },
+  {
+    title: "Packaging Design",
+    image: PackagingDesign,
+    link: "https://www.behance.net/gallery/123719901/Packaging-Design-Coffee",
+    category: "Archive",
+  },
+  {
+    title: "Icons Redesign",
+    image: IconsRedesign,
+    link: "https://www.behance.net/gallery/109087633/Google-Icons-Redesign",
+    category: "Archive",
+  },
+  {
+    title: "Low Poly 3D Design",
+    image: LowPolyDesign,
+    link: "https://www.behance.net/gallery/125058855/Low-Poly-Building-3D-Design",
+    category: "Archive",
+  },
+  {
+    title: "Article Layout Design",
+    image: ArticleLayoutDesign,
+    link: "https://www.behance.net/gallery/103899101/Magazine-Layout-Design",
+    category: "Archive",
+  },
+  {
+    title: "Sandra Hotels",
+    image: SandraHotel,
+    link: "https://www.behance.net/gallery/124079993/SandAra-Logo-Design",
+    category: "Graphic Design",
+  },
+  {
+    title: "Anandi",
+    image: Anandi,
+    link: "https://www.behance.net/gallery/124085611/Logo-Design-for-the-Brand-Anadi",
+    category: "Graphic Design",
+  },
+  {
+    title: "Mood Tracking App",
+    image: MoodMobileApp,
+    link: "https://www.behance.net/gallery/116658513/UIUX-Design-Mood-Tracking-App",
+    category: "UI/UX",
+  },
+  {
+    title: "Kiddle Operating System",
+    image: KiddleOS,
+    link: "https://www.behance.net/gallery/109391939/Design-Sprint-The-Mobile-Operating-Sytem-For-Children",
+    category: "UI/UX",
   },
 ];
 
@@ -89,7 +167,20 @@ const CardComponent: React.FC = () => {
 
   return (
     <div className="container mx-auto mb-16">
-      <div className="flex flex-wrap justify-start gap-2 sm:gap-4 pb-10">
+      <div
+        className="text-primary lg:pt-[130px] lg:-mt-[157px] flex flex-col leading-[150%] mb-[16px] text-center lg:text-left"
+        id="projects"
+      >
+        <h1 className="lg:font-medium font-bold lg:text-5xl text-3xl mb-2 ">
+          Where <span className="text-secondary">Passion</span>{" "}
+          <p className="m-0 p-0 lg:hidden h-0 md:block">
+            <br />
+          </p>
+          meets pixels
+          <span className="text-secondary">.</span>
+        </h1>
+      </div>
+      <div className="grid grid-cols-3 lg:flex lg:justify-start justify-center items-center gap-2 sm:gap-4 pb-10">
         <button
           onClick={() => handleFilterChange("All")}
           onMouseEnter={handleMouseEnter}
@@ -111,16 +202,6 @@ const CardComponent: React.FC = () => {
           UI/UX
         </button>
         <button
-          onClick={() => handleFilterChange("Graphic Design")}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className={`rounded-full px-4 sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
-            filter === "Graphic Design" ? "bg-secondary" : ""
-          }`}
-        >
-          Graphic Design
-        </button>
-        <button
           onClick={() => handleFilterChange("Branding")}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -129,6 +210,16 @@ const CardComponent: React.FC = () => {
           }`}
         >
           Branding
+        </button>
+        <button
+          onClick={() => handleFilterChange("Graphic Design")}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className={`rounded-full px-4 sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
+            filter === "Graphic Design" ? "bg-secondary" : ""
+          }`}
+        >
+          Graphics
         </button>
         <button
           onClick={() => handleFilterChange("Archive")}
@@ -142,7 +233,7 @@ const CardComponent: React.FC = () => {
         </button>
         <audio src={audio} ref={audioRef}></audio>
       </div>
-      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mb-16">
+      <div className="grid gap-8 md:mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mb-16">
         {sortedCards.map((card, index) => (
           <Card
             key={index}

@@ -1,38 +1,49 @@
-import profile from "../assets/image.png";
-
 export default function Hero() {
   return (
-    <div className="lg:pt-[125px] pt-10 lg:pb-[125px] pb-10 w-full flex flex-col lg:flex-row items-center lg:items-start">
-      <div className="relative h-[170px] w-[170px] lg:rounded-[4px] rounded-full">
-        <img
-          src={profile}
-          alt="profile"
-          className="w-full h-full lg:rounded-[4px] rounded-full"
-        />
-      </div>
-      <div className="mt-6 lg:mt-4 lg:ml-12 flex flex-col items-center lg:items-start text-center lg:text-left">
-        <h1 className="pr-2 font-medium text-primary flex text-3xl sm:text-4xl leading-[150%]">
-          Hey! I am Shashidhar<span className="text-secondary">.</span>
-        </h1>
-        {/* <span className="text-primary text-opacity-50">Yadawad</span> */}
-        <div className="flex flex-col md:flex-row sm:space-x-4 mt-4 items-center lg:items-start sm:mt-5">
-          <p className="bg-secondary md:m-0 w-1 h-60 md:h-[94px] rotate-90 md:rotate-0 rounded-t-md sm:mb-0 hidden md:block"></p>
-          <p className="text-primary/60 sm:-m-24 lg:m-0 font-normal text-[20px] leading-[150%] md:ml-4 mt-4 md:mt-0">
-            Creative choreographer turned into{" "}
-            <span className="text-primary font-normal lg:font-light">
-              <b>UI/UX designer </b>
-            </span>
-            <br className="hidden sm:block" />
-            who crafts clean, intuitive interfaces, turning complex{" "}
-            <br className="hidden sm:block" />
-            processes into seamless and enjoyable experiences.
-          </p>
-        </div>
-      </div>
-      <div className="flex flex-1 text-opacity-10 lg:text-[48px] text-6xl font-medium -tracking-[0.04em] leading-none lg:leading-[80%] w-full text-secondary mt-8 lg:mt-4 lg:justify-end justify-center">
-        <p className="lg:text-left text-center">
-          D <br /> For <br /> Dance <br /> & Design
+    <div
+      className="h-screen place-content-center flex place-items-center flex-col gap-y-4"
+      id="#"
+    >
+      <h1 className="lg:text-5xl text-3xl text-primary text-center font-extrabold lg:font-medium lg:leading-[128%]">
+        Hey! <br />I am Shashidhar<span className="text-secondary">.</span>
+      </h1>
+      <p className="bg-secondary w-[3px] rotate-90 h-[256px] -mt-[140px] rounded-full"></p>
+      <div className="text-primary1 font-medium lg:font-normal lg:leading-[150%] text-[20px] -mt-[125px]">
+        <p className="text-center">
+          Creative choreographer turned into{" "}
+          <span className="text-primary text-2xl lg:font-normal font-medium">
+            User Experience Designer
+          </span>{" "}
+          who crafts clean,
+          <br />{" "}
+          <span>
+            intuitive interfaces, turning complex processes into seamless and
+            enjoyable experiences.
+          </span>
         </p>
+      </div>
+      <button className="text-primary lg:font-normal font-medium shadow-lg bg-secondary rounded-full px-8 py-3">
+        Let's sit with some coffee?
+      </button>
+      <div className="mt-[150px] animate-bounce">
+        <a href="#projects">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            version="1.1"
+            width="21.33333396911621"
+            height="21.33333396911621"
+            viewBox="0 0 21.33333396911621 21.33333396911621"
+          >
+            <g transform="matrix(0,-1,1,0,-21.33333396911621,21.33333396911621)">
+              <path
+                d="M10.6667,33.33333396911621L10.6667,42.66663396911621L0,32.00003396911621L10.6667,21.33333396911621L10.6667,30.66666396911621L21.3333,30.66666396911621L21.3333,33.33333396911621L10.6667,33.33333396911621Z"
+                fill="#1B1B1E"
+                fillOpacity="1"
+              />
+            </g>
+          </svg>
+        </a>
       </div>
     </div>
   );

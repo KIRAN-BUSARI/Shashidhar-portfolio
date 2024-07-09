@@ -66,8 +66,8 @@
     .custom-underline::after {
         content: "";
         position: absolute;
-        left: 0;
-        right: 90%;
+        left: 90%;
+        right: 0;
         bottom: -4px;
         /* Adjust the position slightly */
         height: 3px;

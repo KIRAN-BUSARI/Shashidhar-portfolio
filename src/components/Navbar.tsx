@@ -28,7 +28,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-10 w-full border-b border-gray-200 bg-white">
+    <header className="sticky top-0 z-10 w-full border-b border-gray-200 bg-bg">
       <nav className="pt-5 pb-5">
         <div className="flex flex-wrap justify-between items-center max-w-screen-xl">
           <a href="#" className="text-3xl font-medium uppercase">
@@ -45,23 +45,23 @@ export default function Navbar() {
           </button>
 
           <div
-            className={`w-full lg:flex lg:items-center lg:w-auto space-y-2 lg:space-y-0 lg:space-x-12 mt-4 lg:mt-0 ${
+            className={`w-full lg:flex lg:items-center lg:w-auto space-y-2 lg:space-y-0 lg:space-x-12 mt-4 lg:mt-0 text-right ${
               isOpen ? "block" : "hidden"
             }`}
           >
             <a
-              href="#"
+              href="#projects"
               onMouseLeave={handleMouseLeave}
               onMouseEnter={handleMouseEnter}
-              className="custom-underline block text-base text-primary font-normal relative"
+              className="custom-underline block text-lg text-primary font-normal relative"
             >
-              Home
+              Projects
             </a>
             <a
               href="#aboutme"
               onMouseLeave={handleMouseLeave}
               onMouseEnter={handleMouseEnter}
-              className="custom-underline block text-base text-primary font-normal relative"
+              className="custom-underline block text-lg text-primary font-normal relative"
             >
               About Me
             </a>
@@ -69,9 +69,9 @@ export default function Navbar() {
               href="#contact"
               onMouseLeave={handleMouseLeave}
               onMouseEnter={handleMouseEnter}
-              className="custom-underline block text-base text-primary font-normal relative"
+              className="custom-underline block text-lg text-primary font-normal relative"
             >
-              Contact
+              Resume
             </a>
           </div>
           <audio src={audio} ref={audioRef}></audio>
