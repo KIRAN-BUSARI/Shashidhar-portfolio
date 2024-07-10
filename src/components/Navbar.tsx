@@ -72,7 +72,7 @@ export default function Navbar() {
                       href="#contact"
                       onMouseLeave={handleMouseLeave}
                       onMouseEnter={handleMouseEnter}
-                      className="custom-underline block text-primary font-normal relative"
+                      className="custom-underline hidden text-primary font-normal relative"
                     >
                       Resume
                     </a>
@@ -107,7 +107,7 @@ export default function Navbar() {
                   href="#contact"
                   onMouseLeave={handleMouseLeave}
                   onMouseEnter={handleMouseEnter}
-                  className="custom-underline block text-lg text-primary font-normal relative"
+                  className="custom-underline hidden text-lg text-primary font-normal relative"
                 >
                   Resume
                 </a>
