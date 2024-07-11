@@ -54,7 +54,7 @@ const SocialMedia: React.FC = () => {
   return (
     <div className="flex justify-center mb-4">
       <div className="bg-bg drop-shadow-2xl px-3 py-6 rounded-lg">
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col gap-2">
           {socialMediaLinks.map((social) => (
             <a
               key={social.platform}

@@ -145,7 +145,7 @@ const CardComponent: React.FC = () => {
           <span className="text-secondary">.</span>
         </h1>
       </div>
-      <div className="grid grid-cols-3 lg:flex lg:justify-start justify-center items-center gap-2 sm:gap-4 pb-10">
+      <div className="grid grid-cols-3 lg:flex lg:justify-start justify-center items-center gap-2 sm:gap-4 pb-5">
         <button
           onClick={() => handleFilterChange("UI/UX")}
           onMouseEnter={handleMouseEnter}
