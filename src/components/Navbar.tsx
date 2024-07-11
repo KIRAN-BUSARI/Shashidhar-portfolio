@@ -71,6 +71,7 @@ export default function Navbar() {
                     <a
                       href="https://drive.google.com/file/d/1Gd8ksLgUCr6pbsv53fvLqYzy3jecHHS0/view?usp=sharing"
                       target="_blank"
+                      rel="noopener"
                       onMouseLeave={handleMouseLeave}
                       onMouseEnter={handleMouseEnter}
                       className="hover:underline decoration-secondary underline-offset-8 block text-primary font-normal relative"
@@ -106,6 +107,7 @@ export default function Navbar() {
                 </a>
                 <a
                   href="https://drive.google.com/file/d/1Gd8ksLgUCr6pbsv53fvLqYzy3jecHHS0/view?usp=sharing"
+                  rel="noopener"
                   target="_blank"
                   onMouseLeave={handleMouseLeave}
                   onMouseEnter={handleMouseEnter}
