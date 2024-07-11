@@ -10,7 +10,6 @@ export default function Navbar() {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
-    window.location.reload();
   };
 
   const toggleMenu = () => {
@@ -21,7 +20,7 @@ export default function Navbar() {
 
   const handleMouseEnter = () => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.1; // Set the volume
+      audioRef.current.volume = 0.1;
       audioRef.current.play();
     }
   };
@@ -29,7 +28,7 @@ export default function Navbar() {
   const handleMouseLeave = () => {
     if (audioRef.current) {
       audioRef.current.pause();
-      audioRef.current.currentTime = 0; // Reset audio to start
+      audioRef.current.currentTime = 0;
     }
   };
 
