@@ -6,6 +6,12 @@ import audio from "/hover_audio_effect.mp3";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    window.location.reload();
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -50,12 +56,17 @@ export default function Navbar() {
           {isOpen ? (
             <>
               <div className="md:hidden flex fixed right-0 w-full">
-                <div className="items-end h-48 w-full absolute flex mt-10 text-end flex-col">
+                <div
+                  className={`items-end h-48 w-full absolute flex mt-10 text-end flex-col ${
+                    isMenuOpen ? "block" : "hidden"
+                  }`}
+                >
                   <div className="rounded-lg pr-5 space-y-5 font-semibold text-[20px] p-[24px] shadow-lg bg-bg mr-6">
                     <a
                       href="#projects"
                       onMouseLeave={handleMouseLeave}
                       onMouseEnter={handleMouseEnter}
+                      onClick={closeMenu}
                       className="hover:underline decoration-secondary underline-offset-8 block text-primary font-normal relative"
                     >
                       Projects
@@ -64,6 +75,7 @@ export default function Navbar() {
                       href="#aboutme"
                       onMouseLeave={handleMouseLeave}
                       onMouseEnter={handleMouseEnter}
+                      onClick={closeMenu}
                       className="hover:underline decoration-secondary underline-offset-8 block text-primary font-normal relative"
                     >
                       About Me
@@ -71,9 +83,10 @@ export default function Navbar() {
                     <a
                       href="https://drive.google.com/file/d/1Gd8ksLgUCr6pbsv53fvLqYzy3jecHHS0/view?usp=sharing"
                       target="_blank"
-                      rel="noopener"
+                      rel="noopener noreferrer"
                       onMouseLeave={handleMouseLeave}
                       onMouseEnter={handleMouseEnter}
+                      onClick={closeMenu}
                       className="hover:underline decoration-secondary underline-offset-8 block text-primary font-normal relative"
                     >
                       Resume

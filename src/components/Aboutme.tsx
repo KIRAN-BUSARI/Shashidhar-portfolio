@@ -1,11 +1,12 @@
 import rightImage from "../assets/profile.png";
+import { Social } from "./Social";
 
 export default function Aboutme() {
   return (
     <div className="w-full min-h-[90vh] place-content-center" id="aboutme">
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center lg:items-start">
-        <div className="w-full lg:w-[650px] lg:xl:pr-6 xl:w-[650px] h-auto lg:h-[490px] place-content-center">
-          <div className="w-full space-y-6 text-primary1 text-base lg:text-[16px] flex flex-col items-center text-pretty lg:items-start justify-center mt-10 md:mt-0">
+        <div className="w-full lg:w-[650px] lg:xl:pr-6 xl:w-[650px] h-auto lg:h-[490px] place-content-center ">
+          <div className="w-full space-y-6 text-primary1 text-base lg:text-[16px] flex flex-col items-center text-pretty lg:items-start justify-center mt-10 md:mt-0 mb-2">
             <h1 className="text-[38px] lg:font-medium font-extrabold lg:text-5xl lg:text-left text-center text-primary">
               All about <span className="text-secondary">me</span>
               <span className="text-primary">.</span>
@@ -42,11 +43,12 @@ export default function Aboutme() {
               </span>
             </p>
           </div>
+          <Social />
         </div>
-        <div className="relative place-content-center overflow-hidden lg:ml-0 -mt-8 lg:mt-0 xl:w-[424px]">
+        <div className="relative place-content-center h-52 w-52 lg:ml-0 -mt-6 lg:mt-0 xl:w-[424px] rounded-[8px] lg:rounded-[4px] mb-5">
           <img
             src={rightImage}
-            className="lg:w-full object-cover lg:h-[482px] h-52 w-52 lg:rounded-[4px] rounded-[8px]"
+            className="lg:w-full lg:h-[482px] object-cover h-60 w-52 lg:rounded-[4px] rounded-[8px]"
             alt="image"
           />
         </div>

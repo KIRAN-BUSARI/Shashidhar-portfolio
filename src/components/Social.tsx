@@ -1,4 +1,4 @@
-import React, { CSSProperties, MouseEvent } from "react";
+import { CSSProperties, MouseEvent } from "react";
 
 interface SocialMediaLink {
   platform: string;
@@ -39,9 +39,7 @@ const hoverColors: HoverColors = {
   LinkedIn: "#0A66C2",
   WhatsApp: "#25D366",
 };
-
-const SocialMedia: React.FC = () => {
-  // Type definition for event handler
+export const Social = () => {
   const handleMouseEnter =
     (platform: string) => (e: MouseEvent<HTMLAnchorElement>) => {
       (e.currentTarget.style as CSSProperties).color = hoverColors[platform];
@@ -50,32 +48,25 @@ const SocialMedia: React.FC = () => {
   const handleMouseLeave = (e: MouseEvent<HTMLAnchorElement>) => {
     (e.currentTarget.style as CSSProperties).color = "";
   };
-
   return (
-    <div className="justify-center mb-4 md:block hidden relative">
-      <div className="bg-bg drop-shadow-2xl px-3 py-6 rounded-lg">
-        <div className="flex flex-col gap-2">
-          {socialMediaLinks.map((social) => (
-            <a
-              key={social.platform}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary transition duration-300"
-              aria-label={social.platform}
-              style={{
-                transition: "color 0.3s",
-              }}
-              onMouseEnter={handleMouseEnter(social.platform)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <i className={`${social.icon} text-xl`}></i>
-            </a>
-          ))}
-        </div>
-      </div>
+    <div className="flex space-x-4 lg:justify-start justify-center mb-3 mt-0">
+      {socialMediaLinks.map((social) => (
+        <a
+          key={social.platform}
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary transition duration-300"
+          aria-label={social.platform}
+          style={{
+            transition: "color 0.3s",
+          }}
+          onMouseEnter={handleMouseEnter(social.platform)}
+          onMouseLeave={handleMouseLeave}
+        >
+          <i className={`${social.icon} text-3xl`}></i>
+        </a>
+      ))}
     </div>
   );
 };
-
-export default SocialMedia;

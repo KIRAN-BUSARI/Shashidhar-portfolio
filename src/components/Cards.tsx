@@ -133,10 +133,10 @@ const CardComponent: React.FC = () => {
   return (
     <div className="container mx-auto mb-16">
       <div
-        className="text-primary lg:pt-[130px] pt-32 -mt-40 lg:-mt-[157px] flex flex-col leading-[150%] mb-[22px] text-center lg:text-left"
+        className="text-primary lg:pt-[130px] pt-32 -mt-40 lg:-mt-[157px] flex flex-col leading-[150%] text-center lg:text-left"
         id="projects"
       >
-        <h1 className="lg:font-medium font-extrabold leading-[140%] text-[38px] lg:text-5xl text-3xl mb-2 ">
+        <h1 className="lg:font-medium font-extrabold leading-[140%] text-[38px] lg:text-5xl text-3xl">
           Where <span className="text-secondary">Passion</span>{" "}
           <p className="m-0 p-0 lg:hidden h-0 md:block">
             <br />
@@ -145,7 +145,7 @@ const CardComponent: React.FC = () => {
           <span className="text-secondary">.</span>
         </h1>
       </div>
-      <div className="grid grid-cols-3 lg:flex lg:justify-start justify-center items-center gap-2 sm:gap-4 pb-5">
+      <div className="grid grid-cols-3 lg:flex lg:justify-start justify-center items-center gap-2 sm:gap-4 pt-[40px] pb-[40px]">
         <button
           onClick={() => handleFilterChange("UI/UX")}
           onMouseEnter={handleMouseEnter}

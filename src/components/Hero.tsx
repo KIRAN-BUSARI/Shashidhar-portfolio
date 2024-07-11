@@ -1,3 +1,5 @@
+import { Social } from "./Social";
+
 export default function Hero() {
   return (
     <div
@@ -22,9 +24,7 @@ export default function Hero() {
           </span>
         </p>
       </div>
-      <button className="text-primary mt-3 lg:mt-0 lg:font-normal font-bold shadow-lg bg-secondary rounded-full px-8 py-3">
-        Let's talk about design?
-      </button>
+      <Social />
       <div className="mt-[150px] animate-bounce">
         <a href="#projects">
           <svg
