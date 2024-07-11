@@ -3,7 +3,7 @@ import { Social } from "./Social";
 
 export default function Aboutme() {
   return (
-    <div className="w-full min-h-[80vh] place-content-center" id="aboutme">
+    <div className="w-full min-h-[90vh] place-content-center" id="aboutme">
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center lg:items-start">
         <div className="w-full lg:w-[650px] lg:xl:pr-6 xl:w-[650px] h-auto lg:h-[490px] place-content-center ">
           <div className="w-full space-y-5 text-primary1 text-base lg:text-[16px] flex flex-col items-center text-pretty leading-[120%] lg:items-start justify-center mt-10 md:mt-0 mb-2">
