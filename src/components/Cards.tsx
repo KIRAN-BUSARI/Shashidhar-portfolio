@@ -1,22 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Card from "./ZoomCard";
 import Kapable from "../assets/projects/Kapable.png";
 import Rider from "../assets/projects/Rider.png";
-import MyLar from "../assets/projects/MyLar.png";
 import Typography from "../assets/projects/Typography.png";
-import MailScape from "../assets/projects/MailScape.png";
-import Social from "../assets/projects/SocialMediaApp.png";
 import Iconography from "../assets/projects/Iconography.png";
 import MixedMediaDesign from "../assets/projects/Mixed-Media-Design.png";
 import PackagingDesign from "../assets/projects/Packaging-Design.png";
 import IconsRedesign from "../assets/projects/Icons-Redesign.png";
 import ArticleLayoutDesign from "../assets/projects/Article-Layout-Design.png";
 import SandraHotel from "../assets/projects/Sandra_hotel.png";
-import Anandi from "../assets/projects/Anandi.png";
 import MoodMobileApp from "../assets/projects/Mood_Tracking_App.png";
-import KiddleOS from "../assets/projects/Kiddle_Operatin_System.png";
+import KiddleOS from "../assets/projects/Kiddle_Operating_System.png";
 import LowPolyDesign from "../assets/projects/Low-poly-design.png";
-import Dmart from "../assets/projects/Dmart.png";
 
 import audio from "/hover_audio_effect.mp3";
 
@@ -35,40 +30,16 @@ const cardsData: CardData[] = [
     category: "Branding",
   },
   {
-    title: "UI/UX - Rider App",
+    title: "Rider App",
     image: Rider,
     link: "https://www.behance.net/gallery/127419845/Rider-UIUX-Project",
     category: "UI/UX",
   },
   {
-    title: "Logo Design",
-    image: MyLar,
-    link: "https://www.behance.net/gallery/116686631/MYLAR-PACKAGING-SOLUTIONS-PVT-LTD",
-    category: "Branding",
-  },
-  {
-    title: "D Mart Re-Branding",
-    image: Dmart,
-    link: "https://www.behance.net/gallery/116826323/DMART-REBRANDING",
-    category: "Branding",
-  },
-  {
     title: "Typography",
     image: Typography,
     link: "https://www.behance.net/gallery/105377499/Typeface-Poster-Design",
-    category: "Graphic Design",
-  },
-  {
-    title: "UI/UX - Mail Scape",
-    image: MailScape,
-    link: "https://www.behance.net/gallery/116828259/Mailscape-Email-App",
-    category: "UI/UX",
-  },
-  {
-    title: "Social Media App",
-    image: Social,
-    link: "https://www.behance.net/gallery/112139341/Creative-Poster-Design",
-    category: "Graphic Design",
+    category: "Archive",
   },
   {
     title: "Iconography",
@@ -92,7 +63,7 @@ const cardsData: CardData[] = [
     title: "Icons Redesign",
     image: IconsRedesign,
     link: "https://www.behance.net/gallery/109087633/Google-Icons-Redesign",
-    category: "Archive",
+    category: "Branding",
   },
   {
     title: "Low Poly 3D Design",
@@ -110,13 +81,7 @@ const cardsData: CardData[] = [
     title: "Sandra Hotels",
     image: SandraHotel,
     link: "https://www.behance.net/gallery/124079993/SandAra-Logo-Design",
-    category: "Graphic Design",
-  },
-  {
-    title: "Anandi",
-    image: Anandi,
-    link: "https://www.behance.net/gallery/124085611/Logo-Design-for-the-Brand-Anadi",
-    category: "Graphic Design",
+    category: "Branding",
   },
   {
     title: "Mood Tracking App",
@@ -133,25 +98,8 @@ const cardsData: CardData[] = [
 ];
 
 const CardComponent: React.FC = () => {
-  const [filter, setFilter] = useState<string>("All");
+  const [filter, setFilter] = useState<string>("UI/UX");
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
-    const updateFilterBasedOnScreenSize = () => {
-      if (window.innerWidth >= 1024) {
-        setFilter("All");
-      } else {
-        setFilter("UI/UX");
-      }
-    };
-
-    updateFilterBasedOnScreenSize();
-    window.addEventListener("resize", updateFilterBasedOnScreenSize);
-
-    return () => {
-      window.removeEventListener("resize", updateFilterBasedOnScreenSize);
-    };
-  }, []);
 
   const handleFilterChange = (category: string) => {
     setFilter(category);
@@ -197,17 +145,7 @@ const CardComponent: React.FC = () => {
           <span className="text-secondary">.</span>
         </h1>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-start justify-center items-center gap-2 sm:gap-4 pb-10">
-        <button
-          onClick={() => handleFilterChange("All")}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className={`rounded-full md:block hidden px-4 md:font-semibold lg:font-normal sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
-            filter === "All" ? "bg-secondary" : ""
-          }`}
-        >
-          All
-        </button>
+      <div className="grid grid-cols-3 lg:flex lg:justify-start justify-center items-center gap-2 sm:gap-4 pb-10">
         <button
           onClick={() => handleFilterChange("UI/UX")}
           onMouseEnter={handleMouseEnter}
@@ -228,7 +166,7 @@ const CardComponent: React.FC = () => {
         >
           Branding
         </button>
-        <button
+        {/* <button
           onClick={() => handleFilterChange("Graphic Design")}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -237,7 +175,7 @@ const CardComponent: React.FC = () => {
           }`}
         >
           Graphics
-        </button>
+        </button> */}
         <button
           onClick={() => handleFilterChange("Archive")}
           onMouseEnter={handleMouseEnter}

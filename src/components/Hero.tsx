@@ -12,7 +12,7 @@ export default function Hero() {
         <p className="text-center">
           Creative choreographer turned{" "}
           <span className="text-primary text-[20px] lg:font-normal font-medium">
-            User Experience Designer,
+            User Interface & User Experience Designer,
           </span>{" "}
           crafting clean,
           <br />{" "}

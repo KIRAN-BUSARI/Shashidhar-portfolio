@@ -56,7 +56,7 @@ export default function Navbar() {
                       href="#projects"
                       onMouseLeave={handleMouseLeave}
                       onMouseEnter={handleMouseEnter}
-                      className="custom-underline block text-primary font-normal relative"
+                      className="hover:underline decoration-secondary underline-offset-8 block text-primary font-normal relative"
                     >
                       Projects
                     </a>
@@ -64,15 +64,16 @@ export default function Navbar() {
                       href="#aboutme"
                       onMouseLeave={handleMouseLeave}
                       onMouseEnter={handleMouseEnter}
-                      className="custom-underline block text-primary font-normal relative"
+                      className="hover:underline decoration-secondary underline-offset-8 block text-primary font-normal relative"
                     >
                       About Me
                     </a>
                     <a
-                      href="#contact"
+                      href="https://drive.google.com/file/d/1Gd8ksLgUCr6pbsv53fvLqYzy3jecHHS0/view?usp=sharing"
+                      target="_blank"
                       onMouseLeave={handleMouseLeave}
                       onMouseEnter={handleMouseEnter}
-                      className="custom-underline hidden text-primary font-normal relative"
+                      className="hover:underline decoration-secondary underline-offset-8 block text-primary font-normal relative"
                     >
                       Resume
                     </a>
@@ -104,10 +105,11 @@ export default function Navbar() {
                   About Me
                 </a>
                 <a
-                  href="#contact"
+                  href="https://drive.google.com/file/d/1Gd8ksLgUCr6pbsv53fvLqYzy3jecHHS0/view?usp=sharing"
+                  target="_blank"
                   onMouseLeave={handleMouseLeave}
                   onMouseEnter={handleMouseEnter}
-                  className="custom-underline hidden text-lg text-primary font-normal relative"
+                  className="custom-underline block text-lg text-primary font-normal relative"
                 >
                   Resume
                 </a>

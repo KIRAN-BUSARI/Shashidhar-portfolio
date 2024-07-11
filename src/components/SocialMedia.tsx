@@ -26,12 +26,18 @@ const socialMediaLinks: SocialMediaLink[] = [
     url: "https://www.linkedin.com/in/shashidharby/",
     icon: "fab fa-linkedin-in",
   },
+  {
+    platform: "WhatsApp",
+    url: "https://wa.me/+919986563999",
+    icon: "fab fa-whatsapp",
+  },
 ];
 
 const hoverColors: HoverColors = {
   Behance: "#1769ff",
   Instagram: "#E4405F",
   LinkedIn: "#0A66C2",
+  WhatsApp: "#25D366",
 };
 
 const SocialMedia: React.FC = () => {
@@ -47,24 +53,26 @@ const SocialMedia: React.FC = () => {
 
   return (
     <div className="flex justify-center mb-4">
-      <div className="flex space-x-4">
-        {socialMediaLinks.map((social) => (
-          <a
-            key={social.platform}
-            href={social.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-500 transition duration-300"
-            aria-label={social.platform}
-            style={{
-              transition: "color 0.3s",
-            }}
-            onMouseEnter={handleMouseEnter(social.platform)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <i className={`${social.icon} text-2xl`}></i>
-          </a>
-        ))}
+      <div className="bg-bg drop-shadow-2xl px-3 py-6 rounded-lg">
+        <div className="flex flex-col space-y-2">
+          {socialMediaLinks.map((social) => (
+            <a
+              key={social.platform}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary transition duration-300"
+              aria-label={social.platform}
+              style={{
+                transition: "color 0.3s",
+              }}
+              onMouseEnter={handleMouseEnter(social.platform)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <i className={`${social.icon} text-xl`}></i>
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );

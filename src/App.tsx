@@ -3,6 +3,7 @@ import Cards from "./components/Cards";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
+import SocialMedia from "./components/SocialMedia";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         <Hero />
         <Cards />
         <Aboutme />
+      </div>
+      <div className="z-20 fixed top-[290px] right-0">
+        <SocialMedia />
       </div>
     </>
   );

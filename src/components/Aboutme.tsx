@@ -5,7 +5,7 @@ export default function Aboutme() {
     <div className="w-full min-h-[90vh] place-content-center" id="aboutme">
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center lg:items-start">
         <div className="w-full lg:w-[650px] lg:xl:pr-6 xl:w-[650px] h-auto lg:h-[490px] place-content-center">
-          <div className="w-full space-y-6 text-primary1 text-base lg:text-[16px] flex flex-col items-center text-pretty lg:items-start justify-center mt-10">
+          <div className="w-full space-y-6 text-primary1 text-base lg:text-[16px] flex flex-col items-center text-pretty lg:items-start justify-center">
             <h1 className="text-[38px] lg:font-medium font-extrabold lg:text-5xl lg:text-left text-center text-primary">
               All about <span className="text-secondary">me</span>
               <span className="text-primary">.</span>
@@ -43,10 +43,10 @@ export default function Aboutme() {
             </p>
           </div>
         </div>
-        <div className="relative place-content-center lg:ml-0 -mt-8 lg:mt-0 xl:w-[424px]">
+        <div className="relative place-content-center overflow-hidden lg:ml-0 -mt-8 lg:mt-0 xl:w-[424px]">
           <img
             src={rightImage}
-            className="lg:w-full object-cover lg:h-full h-52 w-52 lg:rounded-[4px] rounded-[8px]"
+            className="lg:w-full object-cover lg:h-[482px] h-52 w-52 lg:rounded-[4px] rounded-[8px]"
             alt="image"
           />
         </div>
