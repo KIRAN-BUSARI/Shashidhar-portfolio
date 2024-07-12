@@ -6,11 +6,11 @@ export default function Hero() {
       className="h-screen place-content-center flex place-items-center flex-col gap-y-4"
       id="#"
     >
-      <h1 className="lg:text-5xl text-[38px] leading-[140%] text-primary text-center font-extrabold md:font-bold lg:font-medium lg:leading-[128%] -mt-7 lg:mt-0">
+      <h1 className="lg:text-5xl text-[38px] leading-[130%] text-primary text-center font-extrabold md:font-bold lg:font-medium lg:leading-[128%] -mt-7 lg:mt-0">
         Hey! <br />I am Shashidhar<span className="text-secondary">.</span>
       </h1>
       <p className="bg-secondary w-[3px] rotate-90 h-[256px] -mt-[140px] rounded-full"></p>
-      <div className="text-primary1 font-medium lg:font-normal lg:leading-[150%] text-[20px] -mt-[125px]">
+      <div className="text-primary1 font-medium lg:font-normal lg:leading-[140%] text-[20px] -mt-[125px]">
         <p className="text-center">
           Creative choreographer turned{" "}
           <span className="text-primary text-[20px] lg:font-normal font-medium">

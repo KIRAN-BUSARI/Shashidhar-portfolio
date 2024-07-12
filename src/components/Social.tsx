@@ -49,7 +49,7 @@ export const Social = () => {
     (e.currentTarget.style as CSSProperties).color = "";
   };
   return (
-    <div className="flex space-x-4 lg:justify-start justify-center mb-3 mt-0">
+    <div className="flex space-x-[28px] lg:justify-start justify-center mb-3 mt-0">
       {socialMediaLinks.map((social) => (
         <a
           key={social.platform}

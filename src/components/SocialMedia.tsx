@@ -52,7 +52,7 @@ const SocialMedia: React.FC = () => {
   };
 
   return (
-    <div className="justify-center mb-4 md:block hidden relative">
+    <div className="justify-center mb-4 relative">
       <div className="bg-bg drop-shadow-2xl px-3 py-6 rounded-lg">
         <div className="flex flex-col gap-2">
           {socialMediaLinks.map((social) => (

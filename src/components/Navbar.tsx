@@ -10,6 +10,7 @@ export default function Navbar() {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    location.reload();
   };
 
   const toggleMenu = () => {
