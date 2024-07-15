@@ -10,7 +10,7 @@ import Cards from "./Cards";
 import Aboutme from "./Aboutme";
 import SocialMedia from "./SocialMedia";
 
-const Home = forwardRef((props, ref) => {
+const Home = forwardRef((_props, ref) => {
   const [showSocialMedia, setShowSocialMedia] = useState(false);
 
   const heroRef = useRef(null);
