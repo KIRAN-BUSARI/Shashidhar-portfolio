@@ -166,16 +166,6 @@ const CardComponent: React.FC = () => {
         >
           Branding
         </button>
-        {/* <button
-          onClick={() => handleFilterChange("Graphic Design")}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className={`rounded-full px-4 md:font-semibold lg:font-normal sm:px-6 py-1 border transition-all duration-300 hover:border-secondary text-primary backdrop-blur-sm ${
-            filter === "Graphic Design" ? "bg-secondary" : ""
-          }`}
-        >
-          Graphics
-        </button> */}
         <button
           onClick={() => handleFilterChange("Archive")}
           onMouseEnter={handleMouseEnter}
