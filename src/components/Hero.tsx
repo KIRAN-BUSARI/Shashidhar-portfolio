@@ -10,7 +10,7 @@ export default function Hero() {
         Hey! <br />I am Shashidhar<span className="text-secondary">.</span>
       </h1>
       <p className="bg-secondary w-[3px] rotate-90 h-[256px] -mt-[140px] rounded-full"></p>
-      <div className="text-primary1 font-medium lg:font-normal lg:leading-[140%] text-[20px] -mt-[125px]">
+      <div className="text-primary1 lg:leading-[140%] text-[20px] -mt-[125px]">
         <p className="text-center">
           Creative choreographer turned{" "}
           <span className="text-primary text-[20px] lg:font-normal font-medium">

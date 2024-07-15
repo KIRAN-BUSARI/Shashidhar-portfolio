@@ -3,6 +3,7 @@ import "./style.css";
 import { useRef } from "react";
 import { useState } from "react";
 import audio from "/hover_audio_effect.mp3";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,14 +35,14 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-20 w-full border-b border-gray-200 bg-bg">
+    <header className="sticky top-0 z-20 w-full border-b border-gray-200 bg-bg px-2 md:px-[200px]">
       <nav className="pt-5 pb-5">
         <div className="flex flex-wrap justify-between items-center max-w-screen-xl mx-auto">
-          <a href="#" className="text-3xl font-medium uppercase">
+          <Link to={"/"} className="text-3xl font-medium uppercase">
             <h1 className="text-[#5B5B5B]">
               s<span className="text-secondary">y</span>
             </h1>
-          </a>
+          </Link>
 
           <button
             onClick={toggleMenu}
@@ -87,7 +88,7 @@ export default function Navbar() {
                       onMouseLeave={handleMouseLeave}
                       onMouseEnter={handleMouseEnter}
                       onClick={closeMenu}
-                      className="hover:underline decoration-secondary underline-offset-8 block text-primary font-normal relative"
+                      className="hover:underline hidden decoration-secondary underline-offset-8 md:block text-primary font-normal relative"
                     >
                       Resume
                     </a>
@@ -124,7 +125,7 @@ export default function Navbar() {
                   target="_blank"
                   onMouseLeave={handleMouseLeave}
                   onMouseEnter={handleMouseEnter}
-                  className="custom-underline block text-lg text-primary font-normal relative"
+                  className="custom-underline text-lg text-primary hidden font-normal relative"
                 >
                   Resume
                 </a>
