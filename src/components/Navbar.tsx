@@ -81,17 +81,6 @@ export default function Navbar() {
                     >
                       About Me
                     </a>
-                    <a
-                      href="https://drive.google.com/file/d/1Gd8ksLgUCr6pbsv53fvLqYzy3jecHHS0/view?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onMouseLeave={handleMouseLeave}
-                      onMouseEnter={handleMouseEnter}
-                      onClick={closeMenu}
-                      className="hover:underline hidden decoration-secondary underline-offset-8 md:block text-primary font-normal relative"
-                    >
-                      Resume
-                    </a>
                   </div>
                 </div>
               </div>
@@ -118,16 +107,6 @@ export default function Navbar() {
                   className="custom-underline block text-lg text-primary font-normal relative"
                 >
                   About Me
-                </a>
-                <a
-                  href="https://drive.google.com/file/d/1Gd8ksLgUCr6pbsv53fvLqYzy3jecHHS0/view?usp=sharing"
-                  rel="noopener"
-                  target="_blank"
-                  onMouseLeave={handleMouseLeave}
-                  onMouseEnter={handleMouseEnter}
-                  className="custom-underline text-lg text-primary hidden font-normal relative"
-                >
-                  Resume
                 </a>
               </div>
             </>
