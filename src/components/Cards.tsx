@@ -137,7 +137,7 @@ const CardComponent: React.FC = () => {
         id="projects"
       >
         <h1 className="lg:font-medium font-extrabold leading-[140%] text-[38px] lg:text-5xl text-3xl">
-          Where <span className="text-secondary">Passion</span>{" "}
+          Where Passion{" "}
           <p className="m-0 p-0 lg:hidden h-0 md:block">
             <br />
           </p>
