@@ -10,7 +10,7 @@ const Card = ({
   link: string;
 }) => {
   return (
-    <div className="max-w-sm mx-auto rounded overflow-hidden">
+    <div className="max-w-sm rounded overflow-hidden">
       <Link to={link} target="_blank">
         <div className="overflow-hidden rounded-[4px]">
           <img
