@@ -34,10 +34,10 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-20 w-full border-b border-gray-200 bg-bg px-2 md:px-[200px]">
+    <header className="sticky top-0 z-20 w-full border-b border-gray-200 bg-bg px-2 md:px-[200px] font-madeTommy">
       <nav className="pt-5 pb-5">
         <div className="flex flex-wrap justify-between items-center max-w-screen-xl mx-auto">
-          <a href="#" className="text-3xl font-medium uppercase">
+          <a href="/" className="text-3xl font-medium uppercase">
             <h1 className="text-[#5B5B5B]">
               s<span className="text-secondary">y</span>
             </h1>
