@@ -8,8 +8,8 @@ export default function Aboutme() {
         <div className="w-full lg:w-[650px] lg:xl:pr-6 xl:w-[650px] h-auto lg:h-[490px] place-content-center ">
           <div className="w-full space-y-5 text-primary1 text-base lg:text-[16px] flex flex-col items-center text-pretty leading-[170%] lg:items-start justify-center mt-10 md:mt-0 mb-2">
             <h1 className="text-[38px] lg:font-medium font-extrabold lg:text-5xl lg:text-left text-center text-primary">
-              All about <span className="text-secondary">me</span>
-              <span className="text-primary">.</span>
+              All about me
+              <span className="text-secondary">.</span>
             </h1>
             <p className="lg:text-left text-center text-primary1">
               Currently, I am based in Bangalore, India, working as a{" "}
