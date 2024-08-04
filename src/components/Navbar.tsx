@@ -61,7 +61,7 @@ export default function Navbar() {
                     isMenuOpen ? "block" : "hidden"
                   }`}
                 >
-                  <div className="rounded-lg pr-5 space-y-5 font-semibold text-[20px] p-[24px] shadow-lg bg-bg mr-6">
+                  <div className="rounded-lg pr-5 space-y-5 font-semibold text-[20px] p-[24px] shadow-lg bg-bg">
                     <a
                       href="#projects"
                       onMouseLeave={handleMouseLeave}
